@@ -184,6 +184,7 @@ public class ExtensionCallHome extends ExtensionAdaptor
         JSONObject json = new JSONObject();
         json.put("zapVersion", Constant.PROGRAM_VERSION);
         json.put("os", getOS().toString());
+        json.put("osArch", System.getProperty("os.arch"));
         json.put(
                 "osVersion",
                 System.getProperty("os.name") + " : " + System.getProperty("os.version"));

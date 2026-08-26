@@ -75,7 +75,9 @@ dependencies {
 
     brotli(libs.network.brotli)
     brotli(libs.network.brotli.windows.amd64)
+    brotli(libs.network.brotli.windows.aarch64)
     brotli(libs.network.brotli.linux.amd64)
+    brotli(libs.network.brotli.linux.aarch64)
     brotli(libs.network.brotli.osx.amd64)
     brotli(libs.network.brotli.osx.aarch64)
 
