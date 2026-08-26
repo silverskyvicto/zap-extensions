@@ -114,7 +114,19 @@
 		<slot>0</slot>
 		<slotListIndex>0</slotListIndex>
 	</driver>
-		<driver>
+	<driver>
+		<name>OpenSC - macOS (Apple Silicon, Homebrew)</name>
+		<path>/opt/homebrew/lib/opensc-pkcs11.so</path>
+		<slot>0</slot>
+		<slotListIndex>0</slotListIndex>
+	</driver>
+	<driver>
+		<name>OpenSC - macOS (Intel, Homebrew)</name>
+		<path>/usr/local/lib/opensc-pkcs11.so</path>
+		<slot>0</slot>
+		<slotListIndex>0</slotListIndex>
+	</driver>
+	<driver>
 		<name>Switzerland SuisseID - Windows (x86)</name>
 		<path>C:\WINDOWS\System32\siecap11.dll</path>
 		<slot>3</slot>

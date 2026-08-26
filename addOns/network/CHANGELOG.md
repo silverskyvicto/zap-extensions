@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unreleased
 ### Added
 - Brotli native libraries for Linux aarch64 and Windows ARM64, so `br` content encoding also works on Apple Silicon Linux VMs/containers and Windows on ARM.
+- PKCS#11 driver presets for Homebrew OpenSC on macOS Apple Silicon (`/opt/homebrew/lib`) and Intel (`/usr/local/lib`).
 
 ## [0.29.0] - 2026-08-07
 ### Added
