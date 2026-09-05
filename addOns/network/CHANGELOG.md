@@ -5,7 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
-
+### Added
+- Brotli native libraries for Linux aarch64 and Windows ARM64, so `br` content encoding also works on Apple Silicon Linux VMs/containers and Windows on ARM.
+- PKCS#11 driver presets for Homebrew OpenSC on macOS Apple Silicon (`/opt/homebrew/lib`) and Intel (`/usr/local/lib`).
 
 ## [0.29.0] - 2026-08-07
 ### Added

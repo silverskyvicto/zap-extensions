@@ -4,7 +4,8 @@ All notable changes to this add-on will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## Unreleased
-
+### Added
+- Include the OS architecture (`osArch`) in Check for Updates and telemetry requests so Apple Silicon (aarch64) can be distinguished from Intel.
 
 ## [0.23.0] - 2026-07-13
 ### Added

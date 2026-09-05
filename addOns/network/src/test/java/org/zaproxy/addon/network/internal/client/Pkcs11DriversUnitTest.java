@@ -344,6 +344,13 @@ class Pkcs11DriversUnitTest extends TestUtils {
     private static void assertBundledDrivers(Pkcs11Drivers pkcs11Drivers) {
         assertThat(pkcs11Drivers, hasSize(greaterThan(5)));
         assertThat(pkcs11Drivers.get(0).getName(), containsString("Windows"));
+        assertThat(
+                pkcs11Drivers.stream()
+                        .anyMatch(
+                                driver ->
+                                        "/opt/homebrew/lib/opensc-pkcs11.so"
+                                                .equals(driver.getLibrary())),
+                is(equalTo(true)));
     }
 
     private static void assertDriver(

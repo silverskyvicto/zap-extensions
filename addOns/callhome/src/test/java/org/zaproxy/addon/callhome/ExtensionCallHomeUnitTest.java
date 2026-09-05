@@ -37,6 +37,18 @@ import org.zaproxy.zap.extension.stats.InMemoryStats;
 
 class ExtensionCallHomeUnitTest {
 
+    @Test
+    void shouldHaveOsArchInMandatoryRequestData() {
+        try (MockedStatic<ZAP> zap = mockStatic(ZAP.class)) {
+            // Given
+            zap.when(ZAP::getProcessType).thenReturn(ZAP.ProcessType.daemon);
+            // When
+            JSONObject data = ExtensionCallHome.getMandatoryRequestData();
+            // Then
+            assertThat(data.get("osArch"), is(equalTo(System.getProperty("os.arch"))));
+        }
+    }
+
     @ParameterizedTest
     @EnumSource(value = ZAP.ProcessType.class)
     void shouldHaveZapTypeInMandatoryRequestData(ZAP.ProcessType type) {
